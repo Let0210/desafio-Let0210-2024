@@ -152,4 +152,4 @@ Será necessário ativar o servidor local para executar o arquivo `index.html`. 
 
 1. Na aba `Extensions`, faça o download da extensão `Live Server`.
 2. Clique no arquivo `index.html` com o botão esquerdo do mouse e selecione a opção `Open with Live Server`.
-3. Agora, com a página aberta, a intereção se dá inserindo o nome do animal e quantidade nos campos correspondentes. Ao selecionar o botão `Analisar Recintos` o resultado será exibido logo abaixo.
+3. Agora, com a página aberta, a interação se dá inserindo o nome do animal e quantidade nos campos correspondentes. Ao selecionar o botão `Analisar Recintos` o resultado será exibido logo abaixo.

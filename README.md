@@ -168,6 +168,7 @@ Além dos que já exisitiam, adicionei os seguintes testes:
 2. Não deve permitir que um macaco fique sozinho em um recinto, como o 2.
 3. Deve encontrar recinto para 1 leão.
 > 4. Leopardo
+
 Com essas novas situações o arquivo de teste foi capaz de contemplar todas as linhas do método `analisaRecintos` da classe `RecintosZoo`.
 
 #### 2.3. ARQUIVO `main.js`   

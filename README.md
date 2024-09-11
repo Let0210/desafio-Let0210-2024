@@ -134,20 +134,22 @@ Se todos os passos forem seguidos corretamente, você terá um repositório como
 ### A MINHA SOLUÇÃO
 O usuário pode interagir com o programa de duas formas: digitando através do próprio console (seja da IDE de sua preferência, seja do prompt de comando) ou através de uma página web HTML rodando no servidor local.
 
-#### 1. Execução via console
-Bastar executar o arquivo `main.js`, que é o responsável por "pegar" as entradas digitadas pelo usuário no formato `nome_do_animal_em_maiúsculo_e_sem_acento, quantidade` e logo depois imprimir o resultado como é mostrado no exemplo a seguir:
+#### 1. EXECUÇÃO VIA CONSOLE
+Bastar executar o arquivo `main.js`, dentro da pasta `src`, que é o responsável por "pegar" as entradas digitadas pelo usuário no formato `nome_do_animal_em_maiúsculo_e_sem_acento, quantidade` e logo depois imprimir o resultado como é mostrado no exemplo a seguir:
 
 Entrada:
 ```js
 CROCODILO, 1
 ```
-
 Saída:
 ```js
 {
   recintosViaveis: ["Recinto 4 (espaço livre: 5 total: 8)"] 
-
 }
 ```
+#### 2. EXECUÇÃO VIA PÁGINA WEB
+Será necessário ativar o servidor local para executar o arquivo `index.html`. Dentro da IDE que utilizei, o *VS Code*, isso é feito da seguinte maneira:
 
-
+1. Na aba `Extensions`, faça o download da extensão `Live Server`.
+2. Clique no arquivo `index.html` com o botão esquerdo do mouse e selecione a opção `Open with Live Server`.
+3. Agora, com a página aberta, a intereção se dá inserindo o nome do animal e quantidade nos campos correspondentes. Ao selecionar o botão `Analisar Recintos` o resultado será exibido logo abaixo.

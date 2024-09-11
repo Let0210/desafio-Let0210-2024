@@ -148,7 +148,7 @@ Saída:
   recintosViaveis: ["Recinto 4 (espaço livre: 5 total: 8)"] 
 }
 ```
-#### 2. VIA PÁGINA WEB
+#### 1.2 VIA PÁGINA WEB
 Será necessário ativar o servidor local para executar o arquivo `index.html`. Dentro da IDE que utilizei, o *VS Code*, isso é feito da seguinte maneira:
 
 1. Na aba `Extensions`, faça o download da extensão `Live Server`.

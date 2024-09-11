@@ -159,4 +159,17 @@ Será necessário ativar o servidor local para executar o arquivo `index.html`. 
 Como já foi mencionado anteriormente, a estrutura base do projeto veio com os arquivos de configuração `jest.config.js`, `package-lock.json`, `package.json` e os arquivos de código propriamente ditos `recintos-zoo.js` e `recintos-zoo.test.js`. As alterações que fiz foram em relação a esses dois últimos arquivos e à criação de dois novos: `main.js` e `index.html`.
 
 #### 2.1. ARQUIVO `recintos-zoo.js`
+1. Dentro da classe `RecintosZoo` criei as estruturas de dados correspondentes às características de cada espécie e às características de cada recinto.
+2. No método `analisaRecintos` adicionei os trechos (comentados) referentes a cada restrição presentes na seção `REGRAS PARA ENCONTRAR UM RECINTO` e um último trecho para retornar o resultado.
 
+#### 2.2. ARQUIVO `recintos-zoo.test.js` 
+Além dos que já exisitiam, adicionei os seguintes testes:
+1. Deve encontrar recinto para 1 hipopótamo (respeitando a regra com espécies diferentes).
+2. Não deve permitir que um macaco fique sozinho em um recinto, como o 2.
+3. Deve encontrar recinto para 1 leão.
+> 4. Leopardo  
+
+#### 2.3. ARQUIVO `main.js`   
+> Pegar dados do usuário
+
+#### 2.4. ARQUIVO `index.js` 

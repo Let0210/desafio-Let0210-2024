@@ -154,3 +154,8 @@ Será necessário ativar o servidor local para executar o arquivo `index.html`. 
 1. Na aba `Extensions`, faça o download da extensão `Live Server`.
 2. Clique no arquivo `index.html` com o botão esquerdo do mouse e selecione a opção `Open with Live Server`.
 3. Agora, com a página aberta, a interação se dá inserindo o nome do animal e quantidade nos campos correspondentes. Ao selecionar o botão `Analisar Recintos` o resultado será exibido logo abaixo.
+
+### 2. O QUE ADICIONEI
+Como já foi mencionado anteriormente, a estrutura base do projeto veio com os arquivos de configuração `jest.config.js`, `package-lock.json`, `package.json` e os arquivos de código propriamente ditos `recintos-zoo.js` e `recintos-zoo.test.js` (para a realização de testes). As alterações que fiz foram em relação a esses dois últimos arquivos e à criação de dois novos: `main.js` e `index.html`.
+
+2.1. ARQUIVO `recintos-zoo.js`

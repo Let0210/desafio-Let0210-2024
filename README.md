@@ -158,5 +158,5 @@ Será necessário ativar o servidor local para executar o arquivo `index.html`. 
 ### 2. O QUE ADICIONEI
 Como já foi mencionado anteriormente, a estrutura base do projeto veio com os arquivos de configuração `jest.config.js`, `package-lock.json`, `package.json` e os arquivos de código propriamente ditos `recintos-zoo.js` e `recintos-zoo.test.js`. As alterações que fiz foram em relação a esses dois últimos arquivos e à criação de dois novos: `main.js` e `index.html`.
 
-####2.1. ARQUIVO `recintos-zoo.js`
+#### 2.1. ARQUIVO `recintos-zoo.js`
 

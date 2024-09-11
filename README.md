@@ -135,7 +135,7 @@ Se todos os passos forem seguidos corretamente, você terá um repositório como
 O usuário pode interagir com o programa de duas formas: digitando através do próprio console (seja da IDE de sua preferência, seja do prompt de comando) ou através de uma página web HTML rodando no servidor local.
 
 #### 1. EXECUÇÃO VIA CONSOLE
-Bastar executar o arquivo `main.js`, dentro da pasta `src`, que é o responsável por "pegar" as entradas digitadas pelo usuário no formato `nome_do_animal_em_maiúsculo_e_sem_acento, quantidade` e logo depois imprimir o resultado como é mostrado no exemplo a seguir:
+Bastar executar o arquivo `main.js`, dentro da pasta `src`, que é o responsável por "pegar" as entradas digitadas pelo usuário no formato `nome_do_animal_em_maiúsculo_e_sem_acento, quantidade` e logo depois imprimir o resultado, como é mostrado no exemplo a seguir:
 
 Entrada:
 ```js

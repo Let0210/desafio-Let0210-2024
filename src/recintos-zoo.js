@@ -30,11 +30,13 @@ class RecintosZoo {
         }
 
         const infoAnimal = this.animais[animal];
+        
         const espacoNecessario = infoAnimal.tamanho * quantidade;
         let recintosViaveis = [];
 
         // Verificar recintos
         for (let recinto of this.recintos) {
+            console.log(`Recinto ${recinto.numero}:`);
             let espacoOcupado = 0;
             let carnivorosPresentes = false;
             let macacoPresente = false;
@@ -55,6 +57,7 @@ class RecintosZoo {
             // Verificar espaço ocupado e se há conflito de espécies
             for (let animalExistente of recinto.animais) {
                 const infoAnimalExistente = this.animais[animalExistente.especie];
+                console.log(`infoAnimalExistente.biomas: ${infoAnimalExistente.biomas}`);
                 espacoOcupado += infoAnimalExistente.tamanho * animalExistente.quantidade;
 
                 if (infoAnimalExistente.carnivoro) {
@@ -66,8 +69,12 @@ class RecintosZoo {
                 }
 
                 // Carnívoros só podem ficar com a mesma espécie
-                if (infoAnimal.carnivoro && infoAnimalExistente.especie !== animal) {
+                console.log(`animal =  ${animal}`);
+                console.log(`infoAnimal.carnivoro =  ${infoAnimal.carnivoro}`);
+                console.log(`infoAnimalExistente.especie =  ${infoAnimalExistente.especie}`);
+                if (infoAnimal.carnivoro && animalExistente.especie !== animal) {
                     espacoOcupado = recinto.tamanhoTotal + 1; // Faz com que o recinto não seja viável
+                    console.log(`entrou ${espacoOcupado}`);
                     break;
                 }
             }
@@ -98,6 +105,11 @@ class RecintosZoo {
             }
 
             const espacoRestante = recinto.tamanhoTotal - espacoOcupado - espacoNecessario;
+            
+            //console.log(`Recinto ${recinto.numero}:`);
+            console.log(`Espaço ocupado: ${espacoOcupado}`);
+            console.log(`Espaço necessário: ${espacoNecessario}`);
+            console.log(`Espaço restante: ${espacoRestante}`);
 
             // Adiciona o recinto à lista se houver espaço suficiente
             if (espacoRestante >= 0) {

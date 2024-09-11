@@ -40,7 +40,7 @@ describe('Recintos do Zoologico', () => {
     //Adicionando mais casos de testes para as linhas 77-80 e 84-85 (que não foram contempladas no teste padrão)
 
     //75-80
-    test('Hipopótamo(s) só tolera(m) outras espécies estando num recinto com savana e rio', () => {
+    test('Deve encontrar recinto para 1 hipopótamo (respeitando a regra com espécies diferentes)', () => {
 
         const resultado = new RecintosZoo().analisaRecintos('HIPOPOTAMO', 1);
         expect(resultado.erro).toBeFalsy();
@@ -57,6 +57,15 @@ describe('Recintos do Zoologico', () => {
         expect(resultado.recintosViaveis[0]).toBe('Recinto 1 (espaço livre: 6 total: 10)');
         expect(resultado.recintosViaveis[1]).toBe('Recinto 3 (espaço livre: 3 total: 7)');
         expect(resultado.recintosViaveis.length).toBe(2);
+    });
+
+    //Adicionando mais alguns testes
+    test('Deve encontrar recinto para 1 leão', () => {
+
+        const resultado = new RecintosZoo().analisaRecintos('LEAO', 1);
+        expect(resultado.erro).toBeFalsy();
+        expect(resultado.recintosViaveis[0]).toBe('Recinto 5 (espaço livre: 3 total: 9)');
+        expect(resultado.recintosViaveis.length).toBe(1);
     });
 
 });

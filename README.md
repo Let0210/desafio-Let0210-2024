@@ -174,4 +174,5 @@ Com essas novas situações o arquivo de teste foi capaz de contemplar todas as 
 #### 2.3. ARQUIVO `main.js`   
 > Pegar dados do usuário
 
-#### 2.4. ARQUIVO `index.js` 
+#### 2.4. ARQUIVO `index.js`
+Criei esse arquivo para que fosse possível também a execução do programa no formato de um site simples via localhost. Aqui basicamente têm-se uma estrutura html estilizada que monta a parte visual da página web, manda as respostas digitadas pelo usuário nos campos de formulário para o método `analisaRecintos` da classe `RecintosZoo` no formato compatível e por último mostra as opções de recintos viáveis ou possíveis erros.

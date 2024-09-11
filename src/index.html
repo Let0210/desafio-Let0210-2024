@@ -32,15 +32,12 @@
         document.getElementById('animalForm').addEventListener('submit', function(event) {
             event.preventDefault(); // Evita o envio padrão do formulário
 
-            // Captura os valores dos inputs
             const animal = document.getElementById('animal').value.trim().toUpperCase();
             const quantidade = parseInt(document.getElementById('quantidade').value);
 
-            // Instancia a classe RecintosZoo e analisa os recintos
             const zoo = new RecintosZoo();
             const resultado = zoo.analisaRecintos(animal, quantidade);
 
-            // Exibe o resultado na página
             const resultadoDiv = document.getElementById('resultado');
             if (resultado.erro) {
                 resultadoDiv.textContent = `Erro: ${resultado.erro}`;

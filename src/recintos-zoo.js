@@ -19,12 +19,10 @@ class RecintosZoo {
     }
 
     analisaRecintos(animal, quantidade) {
-        // Verificar se o animal é válido
         if (!this.animais[animal]) {
             return { erro: "Animal inválido" };
         }
 
-        // Verificar se a quantidade é válida
         if (quantidade <= 0) {
             return { erro: "Quantidade inválida" };
         }
@@ -79,7 +77,7 @@ class RecintosZoo {
                 }
             }
 
-            // Regra para hipopótamos: só ficam com outras espécies se estiverem em savana e rio
+            // Hipopótamos só ficam com outras espécies se estiverem em savana e rio
             if (animal === "HIPOPOTAMO" && recinto.animais.length > 0) {
                 if (!recinto.biomas.includes("savana") || !recinto.biomas.includes("rio")) {
                     continue; // Pula o recinto pois não é viável
@@ -117,7 +115,7 @@ class RecintosZoo {
             }
         }
 
-        // Retornar resultado
+        
         if (recintosViaveis.length > 0) {
             return { recintosViaveis: recintosViaveis.sort() };
         } else {

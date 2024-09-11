@@ -132,9 +132,10 @@ Se todos os passos forem seguidos corretamente, você terá um repositório como
 ![Exemplo de repositório](https://startdbstorage.blob.core.windows.net/filecontainer/imagem-estrutura.png)
 
 ## A MINHA SOLUÇÃO
+### 1. COMO EXECUTAR
 O usuário pode interagir com o programa de duas formas: digitando através do próprio console (seja da IDE de sua preferência, seja do prompt de comando) ou através de uma página web HTML rodando no servidor local.
 
-#### 1. EXECUÇÃO VIA CONSOLE
+#### 1.1 VIA TERMINAL
 Bastar executar o arquivo `main.js`, dentro da pasta `src`, que é o responsável por "pegar" as entradas digitadas pelo usuário no formato `nome_do_animal_em_maiúsculo_e_sem_acento, quantidade` e logo depois imprimir o resultado, como é mostrado no exemplo a seguir:
 
 Entrada:
@@ -147,7 +148,7 @@ Saída:
   recintosViaveis: ["Recinto 4 (espaço livre: 5 total: 8)"] 
 }
 ```
-#### 2. EXECUÇÃO VIA PÁGINA WEB
+#### 2. VIA PÁGINA WEB
 Será necessário ativar o servidor local para executar o arquivo `index.html`. Dentro da IDE que utilizei, o *VS Code*, isso é feito da seguinte maneira:
 
 1. Na aba `Extensions`, faça o download da extensão `Live Server`.

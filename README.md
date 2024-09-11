@@ -131,7 +131,7 @@ Se todos os passos forem seguidos corretamente, você terá um repositório como
 
 ![Exemplo de repositório](https://startdbstorage.blob.core.windows.net/filecontainer/imagem-estrutura.png)
 
-### A MINHA SOLUÇÃO
+## A MINHA SOLUÇÃO
 O usuário pode interagir com o programa de duas formas: digitando através do próprio console (seja da IDE de sua preferência, seja do prompt de comando) ou através de uma página web HTML rodando no servidor local.
 
 #### 1. EXECUÇÃO VIA CONSOLE

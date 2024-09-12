@@ -136,7 +136,7 @@ Se todos os passos forem seguidos corretamente, você terá um repositório como
 O usuário pode interagir com o programa de duas formas: digitando através do próprio console (seja da IDE de sua preferência, seja do prompt de comando) ou através de uma página web HTML rodando no servidor local.
 
 #### 1.1 VIA TERMINAL
-Aqui é onde ocorre a forma de execução mais simples, via console. Para iniciar o programa, basta estar dentro da pasta `src` e digitar no terminal `node main.js`. O usuário indicará o nome do animal (pode ser escrito com letras maiúsculas ou minúsculas, pois no fim o programa converte tudo para maiúsculo) e a quantidade. Em seguida o resultado é mostrado e há a possbilidade de continuar ou parar a execução.
+Aqui é onde ocorre a forma de execução mais simples, via console. Para iniciar o programa basta estar dentro da pasta `src` e digitar no terminal `node main.js`, mas antes é necessário instalar o módulo `readline-sync` executando o comando `npm install readline-sync`. Feito isso, usuário indicará o nome do animal (pode ser escrito com letras maiúsculas ou minúsculas, pois no fim o programa converte tudo para maiúsculo) e a quantidade. Em seguida o resultado é mostrado e há a possbilidade de continuar ou parar a execução.
 
 ![Exemplo de execução via terminal](https://github.com/Let0210/desafio-Let0210-2024/blob/main/imagens/exemplo%20execu%C3%A7%C3%A3o%20via%20terminal.png)
 
@@ -154,7 +154,7 @@ Como já foi mencionado anteriormente, a estrutura base do projeto veio com os a
 
 #### 2.1. ARQUIVO `recintos-zoo.js`
 1. Dentro da classe `RecintosZoo` criei as estruturas de dados correspondentes às características de cada espécie e às características de cada recinto.
-2. No método `analisaRecintos` adicionei os trechos (comentados) referentes a cada restrição presentes na seção `REGRAS PARA ENCONTRAR UM RECINTO` e um último trecho para retornar o resultado.
+2. No método `analisaRecintos` adicionei trechos de código (comentados) referentes a cada restrição presentes na seção `REGRAS PARA ENCONTRAR UM RECINTO` e um último trecho para retornar o resultado.
 
 #### 2.2. ARQUIVO `recintos-zoo.test.js` 
 Além dos que já exisitiam, adicionei os seguintes testes:
@@ -166,9 +166,7 @@ Além dos que já exisitiam, adicionei os seguintes testes:
 Com essas novas situações o arquivo de teste foi capaz de contemplar todas as linhas do método `analisaRecintos` da classe `RecintosZoo`.
 
 #### 2.3. ARQUIVO `main.js`   
-Aqui é onde ocorre a forma de execução mais simples, via console. Para iniciar o programa, basta estar dentro da pasta `src` e digitar no terminal `node main.js`.
-
-![Exemplo de execução via terminal](https://github.com/Let0210/desafio-Let0210-2024/blob/main/imagens/exemplo%20execu%C3%A7%C3%A3o%20via%20terminal.png)
+É o arquivo que viabiliza a execução via console. Funciona criando uma interface simples através do módulo `readline-sync`, responsável por armazenar as informações digitadas pelo usuário para que depois possam ser devidamente enviadas ao método `analisaRecintos` da classe `RecintosZoo`. A inter
 
 #### 2.4. ARQUIVO `index.js`
-Criei esse arquivo para que fosse possível também a execução do programa no formato de um site simples via localhost. Aqui basicamente têm-se uma estrutura html estilizada que monta a parte visual da página web, manda as respostas digitadas pelo usuário nos campos de formulário para o método `analisaRecintos` da classe `RecintosZoo` no formato compatível e, por último, mostra as opções de recintos viáveis ou possíveis erros.
+Aqui basicamente têm-se uma estrutura html estilizada que monta a parte visual da página web, manda as respostas digitadas pelo usuário nos campos de formulário para o método `analisaRecintos` da classe `RecintosZoo` no formato compatível e, por último, mostra as opções de recintos viáveis ou possíveis erros.

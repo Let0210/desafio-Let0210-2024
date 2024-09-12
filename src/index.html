@@ -17,7 +17,7 @@
         <input type="text" id="animal" name="animal" placeholder="(sem acento ou til, se houver)" required>
         
         <label for="quantidade">Quantidade:</label>
-        <input type="number" id="quantidade" name="quantidade" placeholder="Ex: 2" min="1" required>
+        <input type="number" id="quantidade" name="quantidade" placeholder="Ex: 2" step="any" required>
         
         <button type="submit">Analisar Recintos</button>
     </form>
@@ -34,7 +34,7 @@
             event.preventDefault(); // Evita o envio padrão do formulário
 
             const animal = document.getElementById('animal').value.trim().toUpperCase();
-            const quantidade = parseInt(document.getElementById('quantidade').value);
+            const quantidade = Number(document.getElementById('quantidade').value);
 
             const zoo = new RecintosZoo();
             const resultado = zoo.analisaRecintos(animal, quantidade);

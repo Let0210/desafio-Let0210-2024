@@ -31,7 +31,7 @@
         import { RecintosZoo } from './recintos-zoo.js';
 
         document.getElementById('animalForm').addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita o envio padrão do formulário
+            event.preventDefault(); // Evita o envio padrão do formulário (sem recarregar a página)
 
             const animal = document.getElementById('animal').value.trim().toUpperCase();
             const quantidade = Number(document.getElementById('quantidade').value);

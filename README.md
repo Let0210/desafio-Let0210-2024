@@ -167,12 +167,14 @@ Além dos que já exisitiam, adicionei os seguintes testes:
 1. Deve encontrar recinto para 1 hipopótamo (respeitando a regra com espécies diferentes).
 2. Não deve permitir que um macaco fique sozinho em um recinto, como o 2.
 3. Deve encontrar recinto para 1 leão.
-> 4. Leopardo
+4. Não deve encontrar recintos para 1 leopardo.
 
 Com essas novas situações o arquivo de teste foi capaz de contemplar todas as linhas do método `analisaRecintos` da classe `RecintosZoo`.
 
 #### 2.3. ARQUIVO `main.js`   
-> Pegar dados do usuário
+Aqui é onde ocorre a forma de execução mais simples, via console. Para iniciar o programa, basta estar dentro da pasta `src` e digitar no terminal `node main.js`.
+
+![Exemplo de execução via terminal](https://github.com/Let0210/desafio-Let0210-2024/blob/main/imagens/exemplo%20execu%C3%A7%C3%A3o%20via%20terminal.png)
 
 #### 2.4. ARQUIVO `index.js`
 Criei esse arquivo para que fosse possível também a execução do programa no formato de um site simples via localhost. Aqui basicamente têm-se uma estrutura html estilizada que monta a parte visual da página web, manda as respostas digitadas pelo usuário nos campos de formulário para o método `analisaRecintos` da classe `RecintosZoo` no formato compatível e, por último, mostra as opções de recintos viáveis ou possíveis erros.

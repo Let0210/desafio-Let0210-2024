@@ -1,33 +1,17 @@
 import { RecintosZoo } from "./recintos-zoo.js";
-import readline from 'readline';
+import readlineSync from 'readline-sync';
 
+let continuar = true;
 
-const rl = readline.createInterface({
-  input: process.stdin,
-  output: process.stdout,
-});
+while (continuar) {
+  const nomeAnimal = readlineSync.question('Digite o nome do animal: ');
+  
+  const quantidade = Number(readlineSync.question('Digite a quantidade: '));
 
-function perguntarRecintos() {
+  console.log(new RecintosZoo().analisaRecintos(nomeAnimal.toUpperCase(), quantidade));
 
-  rl.question('Digite o nome do animal (sem acento ou til): ', (nomeAnimal) => {
-
-    rl.question('Digite a quantidade: ', (quantidade) => {
-
-      const quantidadeNumero = parseInt(quantidade, 10); //10 -> base decimal
-
-      console.log(new RecintosZoo().analisaRecintos(nomeAnimal.toUpperCase(), quantidadeNumero));
-
-      rl.question('Deseja continuar? (s ou S = sim / qualquer outra coisa = não): ', (resposta) => {
-        if (resposta.toLowerCase() === 's') {
-          perguntarRecintos();
-        } else {
-          rl.close();
-        }
-      });
-    });
-  });
+  const resposta = readlineSync.question('Deseja continuar? (s ou S = Sim / qualquer outra coisa = Nao): ');
+  continuar = resposta.toLowerCase() === 's';
 }
 
-
-perguntarRecintos();
-
+console.log('Programa encerrado.');

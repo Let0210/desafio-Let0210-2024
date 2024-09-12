@@ -74,5 +74,11 @@ describe('Recintos do Zoologico', () => {
         expect(resultado.recintosViaveis).toBeFalsy();
     });
 
+    test('Deve rejeitar quantidade inválida (floats)', () => {
+        const resultado = new RecintosZoo().analisaRecintos('MACACO', 2.8);
+        expect(resultado.erro).toBe("Quantidade inválida");
+        expect(resultado.recintosViaveis).toBeFalsy();
+});
+
 });
 

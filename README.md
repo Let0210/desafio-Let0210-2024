@@ -1,13 +1,10 @@
 # RECINTOS DO ZOO
 
-## COMO BAIXAR O CÓDIGO E SUBMETER MINHA SOLUÇÃO?
-Para completar a etapa do desafio você terá que baixar a estrutura do código aqui na Azure, resolver o desafio usando Javascript e entregá-lo no repositório no seu github.
-
 ### BAIXANDO A ESTRUTURA
-Para baixar a estrutura no formato zip, basta clicar neste [link](https://dev.azure.com/db-tecnologia/99dbf7ce-dadd-40d3-b827-e1648cb6a262/_apis/git/repositories/877e7dfb-78ea-465e-bd88-9dbf83120933/items?path=/&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=zip&api-version=5.0&download=true).
+Para baixar a estrutura base do desafio no formato zip, basta clicar neste [link](https://dev.azure.com/db-tecnologia/99dbf7ce-dadd-40d3-b827-e1648cb6a262/_apis/git/repositories/877e7dfb-78ea-465e-bd88-9dbf83120933/items?path=/&versionDescriptor%5BversionOptions%5D=0&versionDescriptor%5BversionType%5D=0&versionDescriptor%5Bversion%5D=main&resolveLfs=true&%24format=zip&api-version=5.0&download=true).
 
 ### ENTREGANDO O DESAFIO
-Após resolver o desafio e validá-lo com os testes (mais detalhes nos tópicos abaixo), você terá que criar um repositório **público** no [Github](https://github.com/) com o **nome** de `desafio-seuUsername-2024` (substitua "seuUsername" pelo seu usuário do GitHub) e colocar o código na **branch** `main`.
+Após resolvê-lo e validá-lo com os testes (mais detalhes nos tópicos abaixo), o desafio tem de ser publicado em um repositório **público** no [Github](https://github.com/) com o **nome** de `desafio-seuUsername-2024` (substituir "seuUsername" pelo nome de usuário do GitHub) e colocar o código na **branch** `main`.
 
 Se você ainda não teve contato com essa ferramenta, não tem problema. Separamos um material para lhe ajudar nessa etapa: [Como usar Git e Github na prática](https://www.youtube.com/watch?v=UBAX-13g8OM).
 
@@ -133,3 +130,49 @@ export { RecintosZoo as RecintosZoo };
 Se todos os passos forem seguidos corretamente, você terá um repositório como o da figura abaixo (lembrando que é permitido criar mais arquivos), onde `seuUsername` é o seu usuário do GitHub, que você informou no questionário da Gupy.
 
 ![Exemplo de repositório](https://startdbstorage.blob.core.windows.net/filecontainer/imagem-estrutura.png)
+
+## A MINHA SOLUÇÃO
+### 1. COMO EXECUTAR
+O usuário pode interagir com o programa de duas formas: digitando através do próprio console (seja da IDE de sua preferência, seja do prompt de comando) ou através de uma página web HTML rodando no servidor local.
+
+#### 1.1 VIA TERMINAL
+Bastar executar o arquivo `main.js`, dentro da pasta `src`, que é o responsável por "pegar" as entradas digitadas pelo usuário no formato `nome_do_animal_em_maiúsculo_e_sem_acento, quantidade` e logo depois imprimir o resultado, como é mostrado no exemplo a seguir:
+
+Entrada:
+```js
+CROCODILO, 1
+```
+Saída:
+```js
+{
+  recintosViaveis: ["Recinto 4 (espaço livre: 5 total: 8)"] 
+}
+```
+#### 1.2 VIA PÁGINA WEB
+Será necessário ativar o servidor local para executar o arquivo `index.html`. Dentro da IDE que utilizei, o *VS Code*, isso é feito da seguinte maneira:
+
+1. Na aba `Extensions`, faça o download da extensão `Live Server`.
+2. Clique no arquivo `index.html` com o botão esquerdo do mouse e selecione a opção `Open with Live Server`.
+3. Agora, com a página aberta, a interação se dá inserindo o nome do animal e quantidade nos campos correspondentes. Ao selecionar o botão `Analisar Recintos` o resultado será exibido logo abaixo.
+
+### 2. O QUE ADICIONEI
+Como já foi mencionado anteriormente, a estrutura base do projeto veio com os arquivos de configuração `jest.config.js`, `package-lock.json`, `package.json` e os arquivos de código propriamente ditos `recintos-zoo.js` e `recintos-zoo.test.js`. As alterações que fiz foram em relação a esses dois últimos arquivos e à criação de dois novos: `main.js` e `index.html`.
+
+#### 2.1. ARQUIVO `recintos-zoo.js`
+1. Dentro da classe `RecintosZoo` criei as estruturas de dados correspondentes às características de cada espécie e às características de cada recinto.
+2. No método `analisaRecintos` adicionei os trechos (comentados) referentes a cada restrição presentes na seção `REGRAS PARA ENCONTRAR UM RECINTO` e um último trecho para retornar o resultado.
+
+#### 2.2. ARQUIVO `recintos-zoo.test.js` 
+Além dos que já exisitiam, adicionei os seguintes testes:
+1. Deve encontrar recinto para 1 hipopótamo (respeitando a regra com espécies diferentes).
+2. Não deve permitir que um macaco fique sozinho em um recinto, como o 2.
+3. Deve encontrar recinto para 1 leão.
+> 4. Leopardo
+
+Com essas novas situações o arquivo de teste foi capaz de contemplar todas as linhas do método `analisaRecintos` da classe `RecintosZoo`.
+
+#### 2.3. ARQUIVO `main.js`   
+> Pegar dados do usuário
+
+#### 2.4. ARQUIVO `index.js`
+Criei esse arquivo para que fosse possível também a execução do programa no formato de um site simples via localhost. Aqui basicamente têm-se uma estrutura html estilizada que monta a parte visual da página web, manda as respostas digitadas pelo usuário nos campos de formulário para o método `analisaRecintos` da classe `RecintosZoo` no formato compatível e, por último, mostra as opções de recintos viáveis ou possíveis erros.

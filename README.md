@@ -135,12 +135,12 @@ Se todos os passos forem seguidos corretamente, você terá um repositório como
 ### 1. COMO EXECUTAR
 O usuário pode interagir com o programa de duas formas: digitando através do próprio console (seja da IDE de sua preferência, seja do prompt de comando) ou através de uma página web HTML rodando no servidor local.
 
-#### 1.1 VIA TERMINAL
+#### 1.1. VIA TERMINAL
 Aqui é onde ocorre a forma de execução mais simples, via console. Para iniciar o programa basta estar dentro da pasta `src` e digitar no terminal `node main.js`, mas antes é necessário instalar o módulo `readline-sync` através do comando `npm install readline-sync`. Feito isso, usuário indicará o nome do animal (pode ser escrito com letras maiúsculas ou minúsculas, pois no fim o programa converte tudo para maiúsculo) e a quantidade. Em seguida o resultado é mostrado e há a possbilidade de continuar ou parar a execução.
 
 ![Exemplo de execução via terminal](https://github.com/Let0210/desafio-Let0210-2024/blob/main/imagens/exemplo%20execu%C3%A7%C3%A3o%20via%20terminal.png)
 
-#### 1.2 VIA PÁGINA WEB
+#### 1.2. VIA PÁGINA WEB
 Será necessário ativar o servidor local para executar o arquivo `index.html`. Dentro da IDE que utilizei, o *VS Code*, isso é feito da seguinte maneira:
 
 1. Na aba `Extensions`, faça o download da extensão `Live Server`.
